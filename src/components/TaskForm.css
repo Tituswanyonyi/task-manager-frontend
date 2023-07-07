@@ -1,0 +1,79 @@
+.task-creation-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .task-creation-form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task-creation-form-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .task-creation-form-container form {
+    width: 100%;
+  }
+  
+  .task-creation-form-container div {
+    margin-bottom: 10px;
+  }
+  
+  .task-creation-form-container label {
+    font-weight: bold;
+  }
+  
+  .task-creation-form-container input,
+  .task-creation-form-container textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .task-creation-form-container .button-group {
+    display: flex;
+    justify-content: space-between; /* Span the buttons to one line with space between */
+    width: 100%;
+  }
+  
+  .task-creation-form-container button[type="submit"] {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-creation-form-container button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .task-creation-form-container button[type="button"] {
+    background-color: #f44336;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-creation-form-container button[type="button"]:hover {
+    background-color: #e53935;
+  }
+  
