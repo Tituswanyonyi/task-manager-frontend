@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './TaskDetails.css';
+import '../css/TaskDetails.css';
 
 const TaskDetails = ({ task, onClose }) => {
   const navigate = useNavigate();
