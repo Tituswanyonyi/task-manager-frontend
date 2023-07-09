@@ -24,7 +24,7 @@ const TaskDetails = ({ task, onClose }) => {
     const handleCompleteTask = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/tasks/${task.id}/complete`, {
+            const response = await fetch(`https://taskmanger.onrender.com/api/tasks/${task.id}/complete`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const TaskDetails = ({ task, onClose }) => {
     const handleInCompleteTask = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/tasks/${task.id}/incomplete`, {
+            const response = await fetch(`https://taskmanger.onrender.com/api/tasks/${task.id}/incomplete`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

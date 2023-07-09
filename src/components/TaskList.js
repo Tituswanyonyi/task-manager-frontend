@@ -15,13 +15,12 @@ const TaskList = () => {
     const [showTaskDetails, setShowTaskDetails] = useState(false);
     const [statusFilter, setStatusFilter] = useState('');
 
-
     const fetchTasks = async () => {
         const token = localStorage.getItem('token');
         console.log('access token:', token);
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/tasks', {
+            const response = await fetch('https://taskmanger.onrender.com/api/tasks', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -71,7 +70,7 @@ const TaskList = () => {
     const handleUpdateFormSubmit = async (updatedTask) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/tasks/${updatedTask.id}`, {
+            const response = await fetch(`https://taskmanger.onrender.com/api/tasks/${updatedTask.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -100,7 +99,7 @@ const TaskList = () => {
     const handleCreateTask = async (task) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/tasks', {
+            const response = await fetch(`https://taskmanger.onrender.com/api/tasks`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -130,7 +129,7 @@ const TaskList = () => {
     const handleDeleteTask = async (taskId) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/tasks/${taskId}`, {
+            const response = await fetch(`https://taskmanger.onrender.com/api/tasks/${taskId}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${token}`,
