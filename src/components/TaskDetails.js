@@ -89,7 +89,6 @@ const TaskDetails = ({ task, onClose, updateTaskList }) => {
             );
         }
     };
-
     return (
         <div className="task-details-container">
             <div className="task-details-header">
