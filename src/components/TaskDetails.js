@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/TaskDetails.css';
 
-const TaskDetails = ({ task, onClose }) => {
+const TaskDetails = ({ task, onClose, updateTaskList }) => {
     const navigate = useNavigate();
     const [successMessage, setSuccessMessage] = useState(null);
     const getStatusColor = (status) => {
@@ -35,6 +35,7 @@ const TaskDetails = ({ task, onClose }) => {
             if (response.ok) {
                 const data = await response.json();
                 setSuccessMessage(data.message);
+                updateTaskList();
             } else {
                 throw new Error('Failed to mark the task as complete.');
             }
@@ -56,6 +57,7 @@ const TaskDetails = ({ task, onClose }) => {
             if (response.ok) {
                 const data = await response.json();
                 setSuccessMessage(data.message);
+                updateTaskList();
             } else {
                 throw new Error('Failed to mark the task as in complete.');
             }

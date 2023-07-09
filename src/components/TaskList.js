@@ -52,7 +52,9 @@ const TaskList = () => {
         setShowTaskDetails(true);
     };
 
-
+    const updateTaskList = async () => {
+        await fetchTasks();
+      };
     const handleCloseDetails = () => {
         setSelectedTask(null);
     };
@@ -197,7 +199,7 @@ const TaskList = () => {
                 Create Task
             </button>
             {selectedTask ? (
-                <TaskDetails task={selectedTask} onClose={handleCloseDetails} />
+                <TaskDetails task={selectedTask} onClose={handleCloseDetails} updateTaskList={updateTaskList}  />
             ) : (
                 <table className="task-list-table">
                     <thead>
