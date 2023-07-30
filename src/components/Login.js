@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../css/LoginForm.css';
+
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -17,7 +19,7 @@ const Login = () => {
         }
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/users/login', {
+            const response = await fetch('https://taskmanger.onrender.com/api/users/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +68,7 @@ const Login = () => {
                 </button>
             </form>
             <p className="create-account-link">
-                Not yet Registered? <a href="/signup">Create account</a>
+                Not yet Registered? <Link to="/signup">Create account</Link>
             </p>
         </div>
     );

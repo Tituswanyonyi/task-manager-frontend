@@ -94,4 +94,11 @@
   .incomplete-btn {
     background-color: #f44336;
   }
-  
+  .task-details-content.success-message
+  .signup-form .message {
+      color: #4caf50;
+    }
+    .success-message
+    .signup-form .message {
+        color: #4caf50;
+      }

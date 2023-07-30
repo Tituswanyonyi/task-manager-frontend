@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/SignupForm.css';
 const SignupForm = () => {
     const [username, setUsername] = useState('');
@@ -6,12 +7,11 @@ const SignupForm = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [message, setMessage] = useState('');
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/users/signup', {
+            const response = await fetch('https://taskmanger.onrender.com/api/users/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const SignupForm = () => {
                 <button type="submit">Sign Up</button>
             </form>
             <p className="create-account-link">
-                Already Registered? <a href="/login">Login</a>
+                Already Registered? <Link to="/login">Login</Link>
             </p>
         </div>
     );
